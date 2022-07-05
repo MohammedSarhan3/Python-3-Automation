@@ -17,3 +17,16 @@ for filename in os.listdir(current_dir):
             os.mkdir("Codes")
         shutil.copy(filename, "Codes")
         os.remove(filename)
+#organize Video files into Videos folder
+    if filename.endswith((".mp4")):
+        if not os.path.exists("Video"):
+            os.mkdir("Video")
+        shutil.copy(filename, "Video")
+        os.remove(filename)
+
+ #organize Docs files into Documents folder
+    if filename.endswith((".pdf",".word")):
+        if not os.path.exists("Documents"):
+            os.mkdir("Documents")
+        shutil.copy(filename, "Documents")
+        os.remove(filename)
