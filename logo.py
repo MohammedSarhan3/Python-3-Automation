@@ -20,3 +20,10 @@ for filename in os.listdir('.'):
         continue
     img= Image.open(filename)
     width , height = img.size
+
+##add logo to the image
+    img.paste(logo_image ,(width-logo_width , height-logo_heigh ))
+
+    ## save image 
+    img.save(os.path.join(NEW_FOLDER_NAME, filename))
+print("DONE")
