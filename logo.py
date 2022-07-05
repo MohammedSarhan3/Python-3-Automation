@@ -8,3 +8,7 @@ NEW_FOLDER_NAME =input('Enter the new folder name: ')
 ## ADD logo information
 logo_image =Image.open( LOGO_NAME)
 logo_width , logo_heigh = logo_image.size
+
+
+##creat folder
+os.mkdir(NEW_FOLDER_NAME)
