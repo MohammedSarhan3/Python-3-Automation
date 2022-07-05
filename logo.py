@@ -12,3 +12,11 @@ logo_width , logo_heigh = logo_image.size
 
 ##creat folder
 os.mkdir(NEW_FOLDER_NAME)
+
+## ADD loop over images
+for filename in os.listdir('.'):
+    ##check in file image & not logo
+    if not (filename.endswith('.png') or filename.endswith('.jpj') or filename == LOGO_NAME):
+        continue
+    img= Image.open(filename)
+    width , height = img.size
