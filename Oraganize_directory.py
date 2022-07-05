@@ -30,9 +30,17 @@ for filename in os.listdir(current_dir):
             os.mkdir("Documents")
         shutil.copy(filename, "Documents")
         os.remove(filename)
+        
 #organize App files into Apps folder
     if filename.endswith((".exe",".dng")):
         if not os.path.exists("Apps"):
             os.mkdir("Apps")
         shutil.copy(filename, "Apps")
+        os.remove(filename)
+
+ #organize archive files into archive folder
+    if filename.endswith((".zip",".rar","tar")):
+        if not os.path.exists("archive"):
+            os.mkdir("archive")
+        shutil.copy(filename, "archive")
         os.remove(filename)
