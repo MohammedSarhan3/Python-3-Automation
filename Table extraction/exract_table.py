@@ -8,3 +8,13 @@ print(simpsons[1])
 #Extract CSV Files from Websites
 #reasing 1 csv file from the website
 df_premire21=pd.read_csv("https://www.football-data.co.uk/mmz4281/2122/E0.csv")
+
+
+#showing dataframe
+print(df_premire21)
+
+#rename columns
+df_premire21.rename(columns={
+        'FTHG': 'home_goals',
+        'FTAG' :'aways_goals'    
+},inplace=True)
