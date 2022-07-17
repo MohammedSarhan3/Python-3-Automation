@@ -17,3 +17,6 @@ result = requests.get("https://wuzzuf.net/search/jobs/?q=python&a=hpb")
 # 3rd step save page cntent/markup
 
 src = result.content
+
+#4th step creat soup object to parse content
+soup = BeautifulSoup(src, "lxml")
