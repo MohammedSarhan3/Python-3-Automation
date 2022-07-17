@@ -13,3 +13,7 @@ skills = []
 # 2nd step use requstes to fatch the url
 
 result = requests.get("https://wuzzuf.net/search/jobs/?q=python&a=hpb")
+
+# 3rd step save page cntent/markup
+
+src = result.content
