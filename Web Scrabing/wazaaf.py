@@ -36,3 +36,11 @@ for i in range(len(job_titles)):
     locations_name.append(locations_names[i].text)
     skills.append(jop_skills[i].text)
 #print(job_title,company_name,locations_name, skills)
+
+# 7th step create csv file and fill it with values
+file_list =[job_title,company_name,locations_name,skills]
+exported = zip_longest(*file_list)
+with open("E:\mohammad\dijongo\myprojects\AUTOMATION/job.csv", "w") as myfile:
+    wr = csv.writer(myfile)
+    wr.writerow(["job title","company name", "lacation", "skills"] )
+    wr.writerows(exported)    
